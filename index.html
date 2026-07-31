@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maria Jane Clark helps authors improve book discovery, positioning, and reader attraction through research-driven strategy." />
+  <title>aria Jane ClarkM | Book Marketing Strategist for Authors</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* COLOR PALETTE */
+    :root {
+      /* Dark Tones */
+      --ink: #1A1A1A;
+      --night: #0F1419;
+      --night-mid: #1C2333;
+      --charcoal: #2D3436;
+
+      /* Light Tones */
+      --linen: #F5F3EE;
+      --cream: #F9F7F2;
+      --sand: #E8E4D8;
+      --white: #FFFFFF;
+
+      /* Warmth */
+      --warmth: #F0E6D8;
+
+      /* Gold System */
+      --gold: #D4AF37;
+      --gold-bright: #E8C547;
+      --gold-light: #F5E6C8;
+      --gold-pale: #F9F4E8;
+      --gold-glow: #FFD700;
+
+      /* Accent Colors */
+      --copper: #B87333;
+      --rose-mist: #E8D4D0;
+      --sage: #8B9D83;
+
+      /* Text Colors */
+      --text-ink: #1A1A1A;
+      --text-body: #3D3D3D;
+      --text-quiet: #6B6B6B;
+
+      /* Border Colors */
+      --border-whisper: #F0EBE3;
+      --border-faint: #E8E3DB;
+      --border-soft: #D9D0C4;
+      --border-visible: #C4B5A0;
+
+      /* Purple for Hero */
+      --purple: #6B4CE6;
+      --purple-dark: #5A3FD5;
+
+      /* Shadows */
+      --shadow: 0 16px 40px rgba(26, 26, 26, 0.12);
+      --shadow-light: 0 8px 20px rgba(26, 26, 26, 0.08);
+      --shadow-hover: 0 24px 60px rgba(212, 175, 55, 0.15);
+
+      --radius: 16px;
+      --radius-lg: 24px;
+
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-body);
+      background: var(--white);
+      line-height: 1.6;
+      letter-spacing: -0.3px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-faint);
+      box-shadow: var(--shadow-light);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold), var(--copper));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 20px;
+      box-shadow: var(--shadow-light);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 8px;
+      align-items: center;
+    }
+
+    nav a {
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--text-quiet);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--linen);
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      background: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold-pale);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--copper));
+      color: var(--white);
+      box-shadow: var(--shadow-light);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .menu-btn {
+      display: none;
+      background: var(--linen);
+      border: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: var(--ink);
+    }
+
+    /* MOBILE MENU */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-faint);
+      padding: 20px;
+      gap: 10px;
+      flex-direction: column;
+      z-index: 99;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 500;
+      color: var(--text-body);
+    }
+
+    .mobile-menu a:hover {
+      background: var(--linen);
+      color: var(--gold);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #7C5BA8 0%, #6B4CE6 50%, #5A3FD5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+      height: 480px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--gold), var(--copper));
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--gold-pale);
+      color: var(--copper);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      border: 1px solid var(--gold-light);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    /* WHY TRUST ME - Keep ink color */
+    #trust h2 {
+      color: var(--ink);
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-body);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      background: var(--linen);
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 520px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, var(--gold), var(--rose-mist));
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--ink);
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-body);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid var(--gold);
+      border: 1px solid var(--border-faint);
+      border-left: 4px solid var(--gold);
+    }
+
+    .feature-box h4 {
+      font-size: 14px;
+      color: var(--copper);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-box p {
+      font-size: 14px;
+      color: var(--text-body);
+      margin: 0;
+    }
+
+    /* WHY TRUST ME SECTION */
+    #trust {
+      background: var(--white);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .trust-card {
+      background: var(--cream);
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-faint);
+    }
+
+    .trust-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      background: var(--gold-pale);
+      box-shadow: var(--shadow);
+    }
+
+    .trust-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .trust-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .trust-card p {
+      font-size: 14px;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* WHAT YOU GET SECTION */
+    #what-get {
+      background: linear-gradient(135deg, var(--cream) 0%, var(--warmth) 100%);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-faint);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--gold);
+    }
+
+    .service-number {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--gold), var(--copper));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-card li {
+      font-size: 14px;
+      color: var(--text-body);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .service-card li:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* PROCESS SECTION */
+    #process {
+      background: var(--white);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+      padding: 30px 20px;
+      background: var(--linen);
+      border-radius: var(--radius);
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-faint);
+    }
+
+    .process-step:hover {
+      background: var(--cream);
+      border-color: var(--gold);
+      box-shadow: var(--shadow-light);
+    }
+
+    .process-number {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--gold), var(--copper));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 24px;
+      margin: 0 auto 16px;
+      box-shadow: var(--shadow-light);
+    }
+
+    .process-step h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .process-step p {
+      font-size: 13px;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+      background: linear-gradient(135deg, var(--night) 0%, var(--night-mid) 100%);
+      color: var(--white);
+    }
+
+    #contact h2 {
+      color: var(--gold);
+    }
+
+    #contact .section-subtitle {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    #contact .section-label {
+      background: rgba(212, 175, 55, 0.2);
+      color: var(--gold-bright);
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-ink);
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 24px;
+    }
+
+    .contact-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .contact-box h3 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    .contact-box a {
+      color: var(--gold-bright);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .contact-box a:hover {
+      color: var(--gold);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--night);
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid var(--border-visible);
+    }
+
+    .footer-content {
+      margin-bottom: 20px;
+    }
+
+    .footer-content h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .footer-content p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      .about-text h3 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#home" class="brand">
+          <div class="brand-icon">MJC</div>
+          <span>Maria Jane Clark</span>
+        </a>
+
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#trust">Why Trust Me</a></li>
+            <li><a href="#what-get">What You Get</a></li>
+            <li><a href="#process">The Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+          <a href="#contact" class="btn btn-primary">Book a Review</a>
+          <button class="menu-btn" id="menu-btn">☰</button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#trust">Why Trust Me</a>
+        <a href="#what-get">What You Get</a>
+        <a href="#process">The Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Your Book Deserves to Be Found by the Right Readers</h1>
+            <p>
+              I am Maria Jane Clark. I help authors improve book discovery through research-driven positioning, strategic placement, and reader-focused marketing. Your book has value. Let's make sure the right readers find it.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">Start Your Review</a>
+              <a href="#what-get" class="btn btn-outline">Learn What I Offer</a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="22222.jpg" alt="Maria Jane Clark Professional Headshot" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">ABOUT ME</span>
+          <h2>Who I Am and How I Work</h2>
+          <p class="section-subtitle">I combine data analysis with author experience to deliver clear, actionable positioning strategies</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image">
+            <img src="22222.jpg" alt="Maria Jane Clark" />
+          </div>
+
+          <div class="about-text">
+            <h3>Let Me Help You Grow</h3>
+            <p>
+              I have spent years studying how books are discovered, positioned, and marketed. I understand the challenges authors face. You write great books. You work hard. But visibility is the missing piece.
+            </p>
+            <p>
+              My approach is simple. I analyze your book using real data. I look at your categories, keywords, cover, blurb, reviews, and reader feedback. Then I show you exactly what is working and what needs to change.
+            </p>
+            <p>
+              This is not guesswork. This is strategy backed by research and market understanding. Your success is my focus.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-box">
+                <h4>Expert Analysis</h4>
+                <p>Real data. Clear signals. No guessing.</p>
+              </div>
+              <div class="feature-box">
+                <h4>Author Focused</h4>
+                <p>I understand your challenges and goals.</p>
+              </div>
+              <div class="feature-box">
+                <h4>Practical Plans</h4>
+                <p>Actionable steps you can implement today.</p>
+              </div>
+              <div class="feature-box">
+                <h4>Book Results</h4>
+                <p>Strategy designed to improve visibility.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY TRUST ME SECTION -->
+    <section id="trust">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">CREDIBILITY</span>
+          <h2>Why Trust Me</h2>
+          <p class="section-subtitle">What makes my approach different and why authors trust my recommendations</p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-icon">📊</div>
+            <h3>Data-Driven Approach</h3>
+            <p>
+              I base every recommendation on real, observable data. Review patterns, category performance, reader language, and market trends. No invented numbers. Pure strategy.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">🎯</div>
+            <h3>Honest Assessment</h3>
+            <p>
+              I tell you the truth about your book. What is working. What needs improvement. What to focus on first. You get clarity, not flattery.
+            </p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon">⭐</div>
+            <h3>Proven Results</h3>
+            <p>
+              Authors who work with me see real improvement in discoverability, visibility, and reader attraction. Real results from real strategy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET SECTION -->
+    <section id="what-get">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">DELIVERABLES</span>
+          <h2>What You Get</h2>
+          <p class="section-subtitle">Comprehensive solutions designed to improve your book's discovery and reader attraction</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-number">1</div>
+            <h3>Discovery Audit</h3>
+            <p>
+              A complete analysis of your current book positioning. I review your categories, keywords, cover, blurb, reviews, and reader language.
+            </p>
+            <ul>
+              <li>Category and keyword alignment check</li>
+              <li>Cover and blurb effectiveness review</li>
+              <li>Reader sentiment analysis</li>
+              <li>Competitive positioning assessment</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">2</div>
+            <h3>Positioning Strategy</h3>
+            <p>
+              A clear roadmap showing how to position your book for maximum visibility. Based on genre, market, and reader expectations.
+            </p>
+            <ul>
+              <li>Genre and niche clarity</li>
+              <li>Target reader identification</li>
+              <li>Comparable title analysis</li>
+              <li>Unique positioning angles</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">3</div>
+            <h3>Action Plan</h3>
+            <p>
+              A detailed, prioritized plan with specific changes to implement. Everything is sequenced so you can execute step by step.
+            </p>
+            <ul>
+              <li>Priority changes and rationale</li>
+              <li>Metadata optimization guides</li>
+              <li>Copy and messaging suggestions</li>
+              <li>Implementation timeline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">WORKFLOW</span>
+          <h2>The Process</h2>
+          <p class="section-subtitle">A clear, transparent process from first contact to implementation</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h3>Initial Contact</h3>
+            <p>You reach out with your book link and what you want to improve.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h3>Book Analysis</h3>
+            <p>I review your storefront, categories, reviews, and current positioning in detail.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h3>Market Research</h3>
+            <p>I analyze comparable titles and reader expectations in your genre.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h3>Strategy Development</h3>
+            <p>I create your personalized positioning and action plan based on findings.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">5</div>
+            <h3>Implementation</h3>
+            <p>You receive everything and start implementing changes. I am available for questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">GET STARTED</span>
+          <h2>Ready to Improve Your Book's Discovery</h2>
+          <p class="section-subtitle">Send your information and let's discuss how I can help your book find its audience</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-form">
+            <form onsubmit="return false;">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required />
+              </div>
+
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="your@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label>Book Link(s)</label>
+                <input type="url" placeholder="Amazon / Goodreads / Your Website" />
+              </div>
+
+              <div class="form-group">
+                <label>What Do You Want to Improve</label>
+                <textarea placeholder="Example: My book has great reviews but low visibility. I need help with category positioning and keywords." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send My Information</button>
+              <p style="font-size: 12px; margin-top: 12px; opacity: 0.85;">I respond to every inquiry within 24 hours.</p>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-box">
+              <h3>Direct Contact</h3>
+              <p><strong>Email:</strong></p>
+              <p><a href="mailto:mariajaneclark3@gmail.com">mariajaneclark3@gmail.com</a></p>
+              <p style="margin-top: 16px;"><strong>Response Time:</strong></p>
+              <p>Within 24 business hours</p>
+            </div>
+
+            <div class="contact-box">
+              <h3>What to Include</h3>
+              <p>
+                Send your book links, tell me about your goals, and share any other details you think are relevant. The more information, the better I can help.
+              </p>
+            </div>
+
+            <div class="contact-box">
+              <h3>Let's Work Together</h3>
+              <p>
+                Your book has potential. You just need the right strategy to unlock it. Let's talk about how I can help you reach your readers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <h4>Maria Jane Clark</h4>
+        <p>Book Marketing Strategist for Authors</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#trust">Trust</a>
+        <a href="#what-get">Services</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p style="font-size: 13px; color: rgba(255, 255, 255, 0.6);">
+        © 2024 Maria Jane Clark. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          mobileMenu.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
